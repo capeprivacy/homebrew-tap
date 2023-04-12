@@ -5,20 +5,20 @@
 class Cape < Formula
   desc ""
   homepage ""
-  version "0.5.8"
+  version "0.5.9"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/capeprivacy/cli/releases/download/v0.5.8/cape_Darwin_arm64.tar.gz"
-      sha256 "47c2387c76476691f322f0471d4d19e9ff13982782e2fe011abfb3eb29d0f9fb"
+    if Hardware::CPU.intel?
+      url "https://github.com/capeprivacy/cli/releases/download/v0.5.9/cape_Darwin_x86_64.tar.gz"
+      sha256 "33d10b52cac47c84c5a2e6069c9a8547194550b0933e72f4c69ea8e9e475350a"
 
       def install
         bin.install "cape"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/capeprivacy/cli/releases/download/v0.5.8/cape_Darwin_x86_64.tar.gz"
-      sha256 "eaea732d5736093b0f5fd185bccca833fe80c8b5e16c491b4d2ddb964f47a68e"
+    if Hardware::CPU.arm?
+      url "https://github.com/capeprivacy/cli/releases/download/v0.5.9/cape_Darwin_arm64.tar.gz"
+      sha256 "3c6c6ba927623655d3395e02b4873b63602802e346a9a78b2d4e3a23c49a25d9"
 
       def install
         bin.install "cape"
@@ -27,17 +27,17 @@ class Cape < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/capeprivacy/cli/releases/download/v0.5.8/cape_Linux_arm64.tar.gz"
-      sha256 "6b110de16e40237e3d1bc1eb5fbcb86fe79d64a5ed11b03e3e688f1693ac8e0f"
+    if Hardware::CPU.intel?
+      url "https://github.com/capeprivacy/cli/releases/download/v0.5.9/cape_Linux_x86_64.tar.gz"
+      sha256 "f26d3be1ecf5dd94cdce59c0eddabf93d50eea3c5e9ab6d600925f65b40c7fd6"
 
       def install
         bin.install "cape"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/capeprivacy/cli/releases/download/v0.5.8/cape_Linux_x86_64.tar.gz"
-      sha256 "0b762c03186342b080140ed95add6b7cf8cba6bcfad22a94b69b417441e83455"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/capeprivacy/cli/releases/download/v0.5.9/cape_Linux_arm64.tar.gz"
+      sha256 "a5071c326c800fca910fd2ef0835d8e0d26f119456d51ab5a681fbb2e85e0a93"
 
       def install
         bin.install "cape"
