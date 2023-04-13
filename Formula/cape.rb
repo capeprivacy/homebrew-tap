@@ -5,20 +5,20 @@
 class Cape < Formula
   desc ""
   homepage ""
-  version "0.5.9"
+  version "0.5.10"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/capeprivacy/cli/releases/download/v0.5.9/cape_Darwin_x86_64.tar.gz"
-      sha256 "33d10b52cac47c84c5a2e6069c9a8547194550b0933e72f4c69ea8e9e475350a"
+      url "https://github.com/capeprivacy/cli/releases/download/v0.5.10/cape_Darwin_x86_64.tar.gz"
+      sha256 "69fc30f1a72b95cf943d4ac54eb1d9293141f6b264ddd68c2c8425cfd1b84797"
 
       def install
         bin.install "cape"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/capeprivacy/cli/releases/download/v0.5.9/cape_Darwin_arm64.tar.gz"
-      sha256 "3c6c6ba927623655d3395e02b4873b63602802e346a9a78b2d4e3a23c49a25d9"
+      url "https://github.com/capeprivacy/cli/releases/download/v0.5.10/cape_Darwin_arm64.tar.gz"
+      sha256 "a160718cb25e0674bd52e7a6b80f678d29b1556bc53bec8f283dab3d20bc5def"
 
       def install
         bin.install "cape"
@@ -27,17 +27,17 @@ class Cape < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/capeprivacy/cli/releases/download/v0.5.9/cape_Linux_x86_64.tar.gz"
-      sha256 "f26d3be1ecf5dd94cdce59c0eddabf93d50eea3c5e9ab6d600925f65b40c7fd6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/capeprivacy/cli/releases/download/v0.5.10/cape_Linux_arm64.tar.gz"
+      sha256 "01938242337b92dda3dfaef6d6e836a5555f6b4bebb67c807ae1fe6590e82bc2"
 
       def install
         bin.install "cape"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/capeprivacy/cli/releases/download/v0.5.9/cape_Linux_arm64.tar.gz"
-      sha256 "a5071c326c800fca910fd2ef0835d8e0d26f119456d51ab5a681fbb2e85e0a93"
+    if Hardware::CPU.intel?
+      url "https://github.com/capeprivacy/cli/releases/download/v0.5.10/cape_Linux_x86_64.tar.gz"
+      sha256 "009c9baa671b164627a472b07846e97b0f950ae8b9afb33abec6825f32b07637"
 
       def install
         bin.install "cape"
