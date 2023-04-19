@@ -5,20 +5,20 @@
 class Cape < Formula
   desc ""
   homepage ""
-  version "0.5.10"
+  version "0.6.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/capeprivacy/cli/releases/download/v0.5.10/cape_Darwin_x86_64.tar.gz"
-      sha256 "69fc30f1a72b95cf943d4ac54eb1d9293141f6b264ddd68c2c8425cfd1b84797"
+      url "https://github.com/capeprivacy/cli/releases/download/v0.6.0/cape_Darwin_x86_64.tar.gz"
+      sha256 "0420f337b60bc821230966dd1a5d7a6848f11d2b3e167599bc0dbf5601d4ff8c"
 
       def install
         bin.install "cape"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/capeprivacy/cli/releases/download/v0.5.10/cape_Darwin_arm64.tar.gz"
-      sha256 "a160718cb25e0674bd52e7a6b80f678d29b1556bc53bec8f283dab3d20bc5def"
+      url "https://github.com/capeprivacy/cli/releases/download/v0.6.0/cape_Darwin_arm64.tar.gz"
+      sha256 "d5fb185ba231e13cb7ceebdb84c884fe80844552a095f83e6cd788def994a4e9"
 
       def install
         bin.install "cape"
@@ -28,16 +28,16 @@ class Cape < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/capeprivacy/cli/releases/download/v0.5.10/cape_Linux_arm64.tar.gz"
-      sha256 "01938242337b92dda3dfaef6d6e836a5555f6b4bebb67c807ae1fe6590e82bc2"
+      url "https://github.com/capeprivacy/cli/releases/download/v0.6.0/cape_Linux_arm64.tar.gz"
+      sha256 "d92b51a28215402d78cc961a93d88367020a6af3bb538c91f804b07d1e6a2047"
 
       def install
         bin.install "cape"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/capeprivacy/cli/releases/download/v0.5.10/cape_Linux_x86_64.tar.gz"
-      sha256 "009c9baa671b164627a472b07846e97b0f950ae8b9afb33abec6825f32b07637"
+      url "https://github.com/capeprivacy/cli/releases/download/v0.6.0/cape_Linux_x86_64.tar.gz"
+      sha256 "492bf1e982af917c62e9a0def8987cd51f8fc092f4ed34f6193e1f81ec2d0911"
 
       def install
         bin.install "cape"
